@@ -22,6 +22,7 @@ public class GameController {
     ResponseEntity<List<Game>>findAll(){
         return ResponseEntity.ok(gameService.findAll());
     }
+
     @PostMapping
     ResponseEntity<?>addNew(@RequestBody Game game){
         gameService.save(game);

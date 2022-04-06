@@ -15,10 +15,9 @@ import java.util.List;
 public interface AvaRepository extends JpaRepository<Availability, Long> {
 
     @Transactional
-    @Modifying(clearAutomatically = true)
+    @Modifying
     @Query("update Availability a SET a.count = ?1 where a.id=?2")
     void updateShopGames(int count, Long id);
-
 
     @Query
     List<Availability>findAllById(Long id);

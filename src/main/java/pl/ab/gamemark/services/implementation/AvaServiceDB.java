@@ -30,8 +30,5 @@ public class AvaServiceDB implements AvaService {
         avaRepository.updateShopGames(count, id);
     }
 
-    @Override
-    public List<Availability> getAllById(Long id) {
-        return avaRepository.;
-    }
+
 }
